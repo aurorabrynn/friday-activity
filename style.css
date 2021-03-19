@@ -1,0 +1,71 @@
+body {
+    background: #333940;
+}
+
+h1, h2 {
+    color: lightblue;
+    text-align: center;
+}
+
+.header p {
+    color: white;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.flexbody {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.snippets {
+    border: 2px dashed white;
+    margin: 10px 20px 40px 20px;
+}
+
+.snippets h2 {
+    border: 1px solid white;
+    position: relative;
+    margin-top: -20px;
+    background-color: #333940;
+    width: 95%;
+    align-self: center;
+}
+
+.snippets p {
+    color: lightblue;
+    padding-left: 20px;
+}
+
+pre {
+    background-image: linear-gradient(#020024 0%, #00d4ff 100%);
+    margin-bottom: 0;
+    margin-left: auto;
+    padding-top: 20px;
+    border-radius: 5px;
+}
+
+.snippets h2:hover, pre:hover {
+    box-shadow: inset 0px 0px 8px
+    #222400, 0 0 15px
+    #FF2B00;
+}
+
+code {
+    font-family: monospace;
+    color: white;
+}
+
+footer {
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .flexbody {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
