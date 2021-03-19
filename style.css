@@ -1,22 +1,143 @@
+:root {
+    --light-blue: #00d4ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: #912800;
+}
+
 body {
+    background: #333940;
+    min-height: 100vh;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+header {
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: var(--light-blue);
+    padding: 20px;
+}
+
+header p {
+    color: white;
+    padding-bottom: 20px;
+}
+
+main{
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 80vh;
+}
+
+figure {
+    border: 1px dashed grey;
+    margin: 5px 0;
+    width: 33%;
+    min-height: 400px;
+}
+
+figure:hover, figure:hover h2 {
+    box-shadow: inset -5px -5px 20px #020024, inset 5px 5px 20px #020024;
+    transition: box-shadow ease 0.5s;
+}
+
+figure h2, figure p {
+    color: var(--light-blue);
+    height: 10%;
+}
+
+figure h2 {
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    bottom: 10px;
     background: #333940;
 }
 
+figure p {
+    width: 90%;
+    margin: 0 auto;
+    align-self: flex-start;
+    height: 20%;
+}
+
+figure section {
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+    background: linear-gradient(#020024 0%, #00d4ff 100%);
+    align-self: stretch;
+    user-select: all;
+    height: 68%;
+    padding: 20px;
+}
+
+pre {
+    overflow: auto;
+}
+
+code {
+    font-size: 150%;
+    color: white;
+}
+
+footer {
+    min-height: 10vh;
+    color: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+    figure {
+        width: 49%
+    }
+}
+
+@media screen and (max-width: 768px) {
+    figure {
+        width: 99%
+    }
+}
+
+/*
 h1, h2 {
     color: lightblue;
     text-align: center;
+    font-size: 200%;
 }
 
 .header p {
     color: white;
-    padding-bottom: 40px;
+    padding: 40px;
     text-align: center;
 }
 
 .flexbody {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
+    border: 1px solid black;
 }
 
 .snippets {
@@ -31,6 +152,7 @@ h1, h2 {
     background-color: #333940;
     width: 95%;
     align-self: center;
+    font-size: 150%;
 }
 
 .snippets p {
@@ -55,11 +177,13 @@ pre {
 code {
     font-family: monospace;
     color: white;
+    letter-spacing: 3px;
 }
 
 footer {
     color: white;
     text-align: center;
+    border: 1px solid black;
 }
 
 @media screen and (max-width: 768px) {
@@ -68,4 +192,4 @@ footer {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
     }
-}
+} */
